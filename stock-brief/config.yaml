@@ -1,0 +1,32 @@
+portfolio:
+  - ticker: "SHAKTIPUMPS"
+    name: "Shakti Pumps"
+    exchange: "BSE"
+    keywords: ["Shakti Pumps", "SHAKTIPUMPS", "PM KUSUM", "solar pump"]
+
+  - ticker: "OSWALGREENS"
+    name: "Oswal Pumps"
+    exchange: "BSE"
+    keywords: ["Oswal Pumps", "Jal Jeevan Mission", "JJM", "OSWALGREENS"]
+
+  - ticker: "BLACKBUCK"
+    name: "Blackbuck (Zinka Logistics)"
+    exchange: "NSE"
+    keywords: ["Blackbuck", "Zinka Logistics", "trucking logistics India"]
+
+  - ticker: "GANECOS"
+    name: "Ganesha Ecosphere"
+    exchange: "NSE"
+    keywords: ["Ganesha Ecosphere", "rPET", "recycled PET", "GANECOS"]
+
+# Add more stocks below in same format
+# - ticker: "TICKER"
+#   name: "Company Name"
+#   exchange: "NSE/BSE"
+#   keywords: ["keyword1", "keyword2"]
+
+settings:
+  report_date_lookback_hours: 24       # How far back to look for news
+  max_news_per_stock: 5                # Max news items to analyse per stock
+  report_time_ist: "07:00"             # Target delivery time (for reference)
+  groq_model: "llama3-70b-8192"        # Groq model to use

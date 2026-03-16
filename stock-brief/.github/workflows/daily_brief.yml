@@ -1,0 +1,49 @@
+name: 📊 Daily Portfolio Morning Brief
+
+on:
+  # Runs every day at 01:30 UTC = 07:00 AM IST
+  schedule:
+    - cron: "30 1 * * 1-6"   # Mon–Sat (skip Sunday)
+
+  # Allow manual trigger from GitHub Actions UI
+  workflow_dispatch:
+    inputs:
+      save_local:
+        description: "Save report HTML locally (for debugging)"
+        required: false
+        default: "false"
+
+jobs:
+  morning-brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 🐍 Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: 📦 Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: 🚀 Run Morning Brief
+        env:
+          GROQ_API_KEY:    ${{ secrets.GROQ_API_KEY }}
+          GMAIL_USER:      ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASS:  ${{ secrets.GMAIL_APP_PASS }}
+          REPORT_TO:       ${{ secrets.REPORT_TO }}
+          SAVE_REPORT_LOCAL: ${{ github.event.inputs.save_local || 'false' }}
+        run: python main.py
+
+      - name: 📁 Upload report artifact (if saved locally)
+        if: github.event.inputs.save_local == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: morning-brief-report
+          path: "*.html"
+          retention-days: 7
