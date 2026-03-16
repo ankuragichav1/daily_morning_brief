@@ -14,7 +14,7 @@ on:
 jobs:
   morning-brief:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: 📥 Checkout repository
@@ -31,24 +31,19 @@ jobs:
 
       - name: 🔍 Verify secrets are set
         run: |
-          echo "Checking secrets..."
-          [ -n "$FINNHUB_API_KEY" ] && echo "✅ FINNHUB_API_KEY is set" || echo "❌ FINNHUB_API_KEY is MISSING"
-          [ -n "$MARKETAUX_KEY" ] && echo "✅ MARKETAUX_KEY is set" || echo "⚠️  MARKETAUX_KEY not set (optional)"
-          [ -n "$GROQ_API_KEY" ] && echo "✅ GROQ_API_KEY is set" || echo "❌ GROQ_API_KEY is MISSING"
-          [ -n "$GMAIL_USER" ] && echo "✅ GMAIL_USER is set" || echo "❌ GMAIL_USER is MISSING"
-          [ -n "$GMAIL_APP_PASS" ] && echo "✅ GMAIL_APP_PASS is set" || echo "❌ GMAIL_APP_PASS is MISSING"
+          echo "Checking required secrets..."
+          [ -n "$GROQ_API_KEY" ]   && echo "✅ GROQ_API_KEY is set"   || echo "❌ GROQ_API_KEY MISSING"
+          [ -n "$GMAIL_USER" ]     && echo "✅ GMAIL_USER is set"     || echo "❌ GMAIL_USER MISSING"
+          [ -n "$GMAIL_APP_PASS" ] && echo "✅ GMAIL_APP_PASS is set" || echo "❌ GMAIL_APP_PASS MISSING"
+          echo "ℹ️  No news API key needed — using Yahoo Finance (yfinance)"
         env:
-          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
-          MARKETAUX_KEY:   ${{ secrets.MARKETAUX_KEY }}
           GROQ_API_KEY:    ${{ secrets.GROQ_API_KEY }}
           GMAIL_USER:      ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASS:  ${{ secrets.GMAIL_APP_PASS }}
 
       - name: 🌐 Test network connectivity
         run: |
-          echo "Testing Finnhub connectivity..."
-          curl -s -o /dev/null -w "finnhub.io: HTTP %{http_code}\n" https://finnhub.io || echo "finnhub.io: unreachable"
-          curl -s -o /dev/null -w "api.marketaux.com: HTTP %{http_code}\n" https://api.marketaux.com || echo "marketaux: unreachable"
+          curl -s -o /dev/null -w "finance.yahoo.com: HTTP %{http_code}\n" https://finance.yahoo.com || echo "yahoo: unreachable"
           curl -s -o /dev/null -w "api.groq.com: HTTP %{http_code}\n" https://api.groq.com || echo "groq: unreachable"
 
       - name: 🚀 Run Morning Brief
@@ -57,8 +52,6 @@ jobs:
           GMAIL_USER:        ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASS:    ${{ secrets.GMAIL_APP_PASS }}
           REPORT_TO:         ${{ secrets.REPORT_TO }}
-          FINNHUB_API_KEY:   ${{ secrets.FINNHUB_API_KEY }}
-          MARKETAUX_KEY:     ${{ secrets.MARKETAUX_KEY }}
           SAVE_REPORT_LOCAL: "true"
         run: python main.py
 
