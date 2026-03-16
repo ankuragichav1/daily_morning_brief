@@ -240,6 +240,6 @@ portfolio:
     keywords: ["Yatharth Hospital", "healthcare NCR"]
 
 settings:
-  report_date_lookback_hours: 24
+  report_date_lookback_hours: 168  # 7 days for testing (change back to 24 once confirmed working)
   max_news_per_stock: 8
   groq_model: "llama3-70b-8192"
