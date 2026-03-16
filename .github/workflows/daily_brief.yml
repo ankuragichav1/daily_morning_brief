@@ -7,9 +7,9 @@ on:
   workflow_dispatch:
     inputs:
       save_local:
-        description: "Save report HTML as artifact (for debugging)"
+        description: "Save report HTML as artifact"
         required: false
-        default: "true"       # default true so you can always download & inspect
+        default: "true"
 
 jobs:
   morning-brief:
@@ -29,15 +29,37 @@ jobs:
       - name: 📦 Install dependencies
         run: pip install -r requirements.txt
 
+      - name: 🔍 Verify secrets are set
+        run: |
+          echo "Checking secrets..."
+          [ -n "$FINNHUB_API_KEY" ] && echo "✅ FINNHUB_API_KEY is set" || echo "❌ FINNHUB_API_KEY is MISSING"
+          [ -n "$MARKETAUX_KEY" ] && echo "✅ MARKETAUX_KEY is set" || echo "⚠️  MARKETAUX_KEY not set (optional)"
+          [ -n "$GROQ_API_KEY" ] && echo "✅ GROQ_API_KEY is set" || echo "❌ GROQ_API_KEY is MISSING"
+          [ -n "$GMAIL_USER" ] && echo "✅ GMAIL_USER is set" || echo "❌ GMAIL_USER is MISSING"
+          [ -n "$GMAIL_APP_PASS" ] && echo "✅ GMAIL_APP_PASS is set" || echo "❌ GMAIL_APP_PASS is MISSING"
+        env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          MARKETAUX_KEY:   ${{ secrets.MARKETAUX_KEY }}
+          GROQ_API_KEY:    ${{ secrets.GROQ_API_KEY }}
+          GMAIL_USER:      ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASS:  ${{ secrets.GMAIL_APP_PASS }}
+
+      - name: 🌐 Test network connectivity
+        run: |
+          echo "Testing Finnhub connectivity..."
+          curl -s -o /dev/null -w "finnhub.io: HTTP %{http_code}\n" https://finnhub.io || echo "finnhub.io: unreachable"
+          curl -s -o /dev/null -w "api.marketaux.com: HTTP %{http_code}\n" https://api.marketaux.com || echo "marketaux: unreachable"
+          curl -s -o /dev/null -w "api.groq.com: HTTP %{http_code}\n" https://api.groq.com || echo "groq: unreachable"
+
       - name: 🚀 Run Morning Brief
         env:
           GROQ_API_KEY:      ${{ secrets.GROQ_API_KEY }}
           GMAIL_USER:        ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASS:    ${{ secrets.GMAIL_APP_PASS }}
           REPORT_TO:         ${{ secrets.REPORT_TO }}
-          NEWS_API_KEY:      ${{ secrets.NEWS_API_KEY }}
-          GNEWS_API_KEY:     ${{ secrets.GNEWS_API_KEY }}
-          SAVE_REPORT_LOCAL: ${{ github.event.inputs.save_local || 'true' }}
+          FINNHUB_API_KEY:   ${{ secrets.FINNHUB_API_KEY }}
+          MARKETAUX_KEY:     ${{ secrets.MARKETAUX_KEY }}
+          SAVE_REPORT_LOCAL: "true"
         run: python main.py
 
       - name: 📁 Upload report HTML as artifact
