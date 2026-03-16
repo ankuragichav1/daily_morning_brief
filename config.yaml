@@ -1,23 +1,239 @@
 portfolio:
-  - ticker: "SHAKTIPUMPS"
-    name: "Shakti Pumps"
-    exchange: "BSE"
-    keywords: ["Shakti Pumps", "SHAKTIPUMPS", "PM KUSUM", "solar pump"]
 
-  - ticker: "OSWALGREENS"
-    name: "Oswal Pumps"
-    exchange: "BSE"
-    keywords: ["Oswal Pumps", "Jal Jeevan Mission", "JJM", "OSWALGREENS"]
+  - ticker: "ABDL"
+    name: "Allied Blenders & Distillers"
+    exchange: "NSE"
+    keywords: ["ABDL", "Allied Blenders", "liquor company"]
+
+  - ticker: "ACUTAAS"
+    name: "Acutas Healthcare"
+    exchange: "NSE"
+    keywords: ["ACUTAAS", "Acutas"]
+
+  - ticker: "ARMANFIN"
+    name: "Arman Financial Services"
+    exchange: "NSE"
+    keywords: ["ARMANFIN", "Arman Finance", "NBFC"]
+
+  - ticker: "BECTORFOOD"
+    name: "Mrs Bectors Food"
+    exchange: "NSE"
+    keywords: ["BECTORFOOD", "Mrs Bectors"]
 
   - ticker: "BLACKBUCK"
-    name: "Blackbuck (Zinka Logistics)"
+    name: "Zinka Logistics (Blackbuck)"
     exchange: "NSE"
     keywords: ["Blackbuck", "Zinka Logistics", "trucking logistics India"]
+
+  - ticker: "CAPLIPOINT"
+    name: "Caplin Point Laboratories"
+    exchange: "NSE"
+    keywords: ["CAPLIPOINT", "Caplin Point"]
+
+  - ticker: "CENTRUM"
+    name: "Centrum Capital"
+    exchange: "NSE"
+    keywords: ["CENTRUM", "Centrum Capital"]
+
+  - ticker: "COCHINSHIP"
+    name: "Cochin Shipyard"
+    exchange: "NSE"
+    keywords: ["COCHINSHIP", "Cochin Shipyard", "defence shipbuilding"]
+
+  - ticker: "CRAFTSMAN"
+    name: "Craftsman Automation"
+    exchange: "NSE"
+    keywords: ["CRAFTSMAN", "Craftsman Automation"]
+
+  - ticker: "ENTERO"
+    name: "Entero Healthcare"
+    exchange: "NSE"
+    keywords: ["ENTERO", "Entero Healthcare"]
+
+  - ticker: "EPACK"
+    name: "EPACK Durable"
+    exchange: "NSE"
+    keywords: ["EPACK", "EPACK Durable"]
+
+  - ticker: "EQUITASBNK"
+    name: "Equitas Small Finance Bank"
+    exchange: "NSE"
+    keywords: ["EQUITASBNK", "Equitas Bank"]
+
+  - ticker: "FEDFINA"
+    name: "Fedbank Financial Services"
+    exchange: "NSE"
+    keywords: ["FEDFINA", "Fedbank Finance"]
+
+  - ticker: "FIVESTAR"
+    name: "Five Star Business Finance"
+    exchange: "NSE"
+    keywords: ["FIVESTAR", "Five Star Finance"]
 
   - ticker: "GANECOS"
     name: "Ganesha Ecosphere"
     exchange: "NSE"
-    keywords: ["Ganesha Ecosphere", "rPET", "recycled PET", "GANECOS"]
+    keywords: ["GANECOS", "Ganesha Ecosphere", "rPET", "recycled PET"]
+
+  - ticker: "GOKEX"
+    name: "Gokaldas Exports"
+    exchange: "NSE"
+    keywords: ["GOKEX", "Gokaldas Exports"]
+
+  - ticker: "GRAVITA"
+    name: "Gravita India"
+    exchange: "NSE"
+    keywords: ["GRAVITA", "Gravita India", "lead recycling"]
+
+  - ticker: "IEX"
+    name: "Indian Energy Exchange"
+    exchange: "NSE"
+    keywords: ["IEX", "Indian Energy Exchange"]
+
+  - ticker: "IMPAL"
+    name: "India Motor Parts & Accessories"
+    exchange: "NSE"
+    keywords: ["IMPAL", "Motor Parts"]
+
+  - ticker: "INDIAMART"
+    name: "IndiaMART InterMESH"
+    exchange: "NSE"
+    keywords: ["INDIAMART", "IndiaMART"]
+
+  - ticker: "JMFINANCIL"
+    name: "JM Financial"
+    exchange: "NSE"
+    keywords: ["JMFINANCIL", "JM Financial"]
+
+  - ticker: "JSWINFRA"
+    name: "JSW Infrastructure"
+    exchange: "NSE"
+    keywords: ["JSWINFRA", "JSW Infra"]
+
+  - ticker: "LUMAXIND"
+    name: "Lumax Industries"
+    exchange: "NSE"
+    keywords: ["LUMAXIND", "Lumax", "automotive lighting", "automotive LED", "Lumax Industries"]
+
+  - ticker: "MAITHANALL"
+    name: "Maithan Alloys"
+    exchange: "NSE"
+    keywords: ["MAITHANALL", "Maithan Alloys"]
+
+  - ticker: "MAXIND"
+    name: "Max India"
+    exchange: "NSE"
+    keywords: ["MAXIND", "Max India"]
+
+  - ticker: "MEDIASSIST"
+    name: "Medi Assist Healthcare"
+    exchange: "NSE"
+    keywords: ["MEDIASSIST", "Medi Assist"]
+
+  - ticker: "NH"
+    name: "Narayana Hrudayalaya"
+    exchange: "NSE"
+    keywords: ["NH", "Narayana Health", "Narayana Hrudayalaya"]
+
+  - ticker: "NORTHARC"
+    name: "Northern Arc Capital"
+    exchange: "NSE"
+    keywords: ["NORTHARC", "Northern Arc"]
+
+  - ticker: "NUVAMA"
+    name: "Nuvama Wealth Management"
+    exchange: "NSE"
+    keywords: ["NUVAMA", "Nuvama Wealth"]
+
+  - ticker: "OSWALPUMPS"
+    name: "Oswal Pumps"
+    exchange: "NSE"
+    keywords: ["Oswal Pumps", "Jal Jeevan Mission", "JJM", "solar pump", "PM KUSUM"]
+
+  - ticker: "PERSISTENT"
+    name: "Persistent Systems"
+    exchange: "NSE"
+    keywords: ["PERSISTENT", "Persistent Systems"]
+
+  - ticker: "PGEL"
+    name: "PG Electroplast"
+    exchange: "NSE"
+    keywords: ["PGEL", "PG Electroplast"]
+
+  - ticker: "PNGJL"
+    name: "PN Gadgil Jewellers"
+    exchange: "NSE"
+    keywords: ["PNGJL", "PN Gadgil"]
+
+  - ticker: "POCL"
+    name: "Pondy Oxides"
+    exchange: "NSE"
+    keywords: ["POCL", "Pondy Oxides"]
+
+  - ticker: "PRICOLLTD"
+    name: "Pricol"
+    exchange: "NSE"
+    keywords: ["PRICOLLTD", "Pricol"]
+
+  - ticker: "PRIVISCL"
+    name: "Privi Speciality Chemicals"
+    exchange: "NSE"
+    keywords: ["PRIVISCL", "Privi Chemicals"]
+
+  - ticker: "RATEGAIN"
+    name: "RateGain Travel Technologies"
+    exchange: "NSE"
+    keywords: ["RATEGAIN", "RateGain"]
+
+  - ticker: "SAGILITY"
+    name: "Sagility India"
+    exchange: "NSE"
+    keywords: ["SAGILITY"]
+
+  - ticker: "SAMMAANCAP"
+    name: "Sammaan Capital"
+    exchange: "NSE"
+    keywords: ["SAMMAANCAP"]
+
+  - ticker: "SANSERA"
+    name: "Sansera Engineering"
+    exchange: "NSE"
+    keywords: ["SANSERA"]
+
+  - ticker: "SBFC"
+    name: "SBFC Finance"
+    exchange: "NSE"
+    keywords: ["SBFC"]
+
+  - ticker: "SHAKTIPUMP"
+    name: "Shakti Pumps"
+    exchange: "NSE"
+    keywords: ["SHAKTIPUMP", "solar pump", "PM KUSUM", "Jal Jeevan Mission", "JJM"]
+
+  - ticker: "SHRIPISTON"
+    name: "Shriram Pistons"
+    exchange: "NSE"
+    keywords: ["SHRIPISTON", "Shriram Pistons"]
+
+  - ticker: "SJS"
+    name: "SJS Enterprises"
+    exchange: "NSE"
+    keywords: ["SJS Enterprises", "SJS"]
+
+  - ticker: "SONACOMS"
+    name: "Sona BLW Precision"
+    exchange: "NSE"
+    keywords: ["SONACOMS", "Sona Comstar"]
+
+  - ticker: "WINDLAS"
+    name: "Windlas Biotech"
+    exchange: "NSE"
+    keywords: ["WINDLAS" , "Windlas Biotech"]
+
+  - ticker: "YATHARTH"
+    name: "Yatharth Hospital"
+    exchange: "NSE"
+    keywords: ["YATHARTH", "Yatharth Hospital"]
 
 # Add more stocks below in same format
 # - ticker: "TICKER"
