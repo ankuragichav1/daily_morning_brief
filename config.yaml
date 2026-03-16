@@ -9,7 +9,7 @@ portfolio:
     exchange: "NSE"
     keywords: ["Allied Blenders", "Sterling Reserve", "Officer's Choice"]
 
-  - ticker: "ACUITAS"
+  - ticker: "ACUTAAS"
     name: "Acuitas Healthcare"
     exchange: "NSE"
     keywords: ["Acuitas Healthcare"]
@@ -54,7 +54,7 @@ portfolio:
     exchange: "NSE"
     keywords: ["Entero Healthcare", "pharma distribution"]
 
-  - ticker: "EPACKDURA"
+  - ticker: "EPACK"
     name: "EPACK Durable"
     exchange: "NSE"
     keywords: ["EPACK Durable", "RAC components", "air conditioner"]
@@ -79,7 +79,7 @@ portfolio:
     exchange: "NSE"
     keywords: ["Ganesha Ecosphere", "rPET", "recycled PET", "RPET India"]
 
-  - ticker: "GOKALDAS"
+  - ticker: "GOKEX"
     name: "Gokaldas Exports"
     exchange: "NSE"
     keywords: ["Gokaldas Exports", "garments export India"]
@@ -164,22 +164,22 @@ portfolio:
     exchange: "NSE"
     keywords: ["PG Electroplast", "EMS India", "electronics manufacturing"]
 
-  - ticker: "PNGGLOBAL"
+  - ticker: "PNGJL"
     name: "PN Gadgil Jewellers"
     exchange: "NSE"
     keywords: ["PN Gadgil", "PNG Jewellers", "jewellery retail"]
 
-  - ticker: "PONDYOXIDE"
+  - ticker: "POCL"
     name: "Pondy Oxides"
     exchange: "NSE"
     keywords: ["Pondy Oxides", "lead oxide", "battery materials"]
 
-  - ticker: "PRICOL"
+  - ticker: "PRICOLLTD"
     name: "Pricol"
     exchange: "NSE"
     keywords: ["Pricol", "auto instruments India"]
 
-  - ticker: "PRIVISCHEM"
+  - ticker: "PRIVISCL"
     name: "Privi Speciality Chemicals"
     exchange: "NSE"
     keywords: ["Privi Speciality", "aroma chemicals India"]
@@ -194,7 +194,7 @@ portfolio:
     exchange: "NSE"
     keywords: ["Sagility India", "healthcare BPO"]
 
-  - ticker: "SAMMAAN"
+  - ticker: "SAMMAANCAP"
     name: "Sammaan Capital"
     exchange: "NSE"
     keywords: ["Sammaan Capital", "Indiabulls Housing", "home loans"]
@@ -209,17 +209,17 @@ portfolio:
     exchange: "NSE"
     keywords: ["SBFC Finance", "small business loans India"]
 
-  - ticker: "SHAKTIPUMPS"
+  - ticker: "SHAKTIPUMP"
     name: "Shakti Pumps"
     exchange: "NSE"
     keywords: ["Shakti Pumps", "PM KUSUM", "solar pump India"]
 
-  - ticker: "SHRIRAMPISTONS"
+  - ticker: "SHRIPISTON"
     name: "Shriram Pistons"
     exchange: "NSE"
     keywords: ["Shriram Pistons", "auto components India"]
 
-  - ticker: "SJSENTERPR"
+  - ticker: "SJS"
     name: "SJS Enterprises"
     exchange: "NSE"
     keywords: ["SJS Enterprises", "aesthetics auto India"]
